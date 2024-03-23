@@ -1,0 +1,201 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pageflex {
+    display: flex;
+    flex-direction: row;
+}
+
+body {
+    background-color: rgb(2, 4, 9);
+    color: rgb(231, 237, 242);
+    font-family: Helvetica Neue;
+}
+
+h2.h2{
+    text-align: center;
+    margin-bottom: 2vh;
+    text-decoration: underline;
+}
+
+.desc{
+    text-align: justify;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.etudes{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-color: rgb(28, 31, 37);
+    margin-left:-2vw;
+    margin-top:2vh;
+}
+
+hr.dotted {
+    background-color: transparent;
+    border: none;
+    border-top: 1px dashed rgb(28, 31, 37);
+}
+
+
+.containerright {
+    flex: 1 / 5;
+    display: flex;
+    padding-left: 2vw;
+    padding-top: 5vh;
+    padding: auto auto;
+    height: 100vh;
+    width: calc((100vw / 5)*4);
+    background-color: rgb(12, 14, 18);
+    border-right: 1px solid rgb(28, 31, 37);
+}
+
+.containerleft {
+    flex:  1 / 5;
+    padding-left: 2vw;
+    padding-top: 5vh;
+    height: 100vh;
+    width: calc((100vw / 5));
+    background-color: rgb(14, 17, 22);
+    border-right: 1px solid rgb(28, 31, 37);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(231, 237, 242);
+}
+
+a:hover {
+    color: rgb(231, 237, 242);
+    text-decoration: underline;
+}
+
+.navigate {
+    font-size: clamp(8px, 4vw, 15px);
+    margin-bottom: 1vh;
+}
+
+ul {
+    list-style-type: disc;
+    font-size: 15px; /* Taille de police fixe pour ul */
+}
+
+#gitlist{
+    list-style-type:none;
+}
+
+li{
+    margin-bottom: 0.2vh;
+}
+
+.pdpmini {
+    width: 0.8vw;
+    height: 0.8vw;
+    background-image: url('./assets/git.png');
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline .pdpmini {
+    margin-right: 0.5vw;
+}
+
+h1 {
+    color: rgb(231, 237, 242);;
+    font-family: Helvetica Neue;
+    font-size: clamp(10px, 4vw, 20px);
+    margin-top : 1vh;
+    margin-bottom: 2vh;
+}
+
+h4.h4{
+    color: rgb(231, 237, 242);;
+    font-family: Helvetica Neue;
+    font-size: clamp(10px, 4vw, 15px);
+    margin-top : 1vh;
+    margin-bottom: 2vh;
+}
+
+.imgetudeswallon {
+    width: 15vw;
+    height: 10vh;
+    background-image: url("assets/wallon.png");
+    background-position: center;
+    background-size: 50%;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 31, 37);
+    background-repeat: no-repeat;
+    background-color: rgb(18, 21, 25);
+}
+
+.imgetudesinsa {
+    width: 15vw;
+    height: 10vh;
+    background-image: url("assets/insa.png");
+    background-position: center;
+    background-size: 50%;
+    border-radius: 10px;
+    border: 1px solid rgb(28, 31, 37);
+    background-color: rgb(18, 21, 25);
+    background-repeat: no-repeat;
+}
+
+.imgetudesinsa, .imgetudeswallon{
+    transition: transform 0.5s;
+}
+
+.imgetudesinsa:hover, .imgetudeswallon:hover {
+    transform:translateY(5px)
+}
+
+.etudes{
+    font-size: 12px;
+}
+
+#markdown-content{
+    height: 55vh;
+    width: 70vw;
+    background-color: rgb(18, 21, 25);
+    border: 1px solid rgb(28, 31, 37);
+    border-radius: 20px;
+    padding: 3vw 5vw 3vw 5vw;
+    overflow: scroll;
+}
+
+.contact{
+    height: 25vh;
+    width: 70vw;
+    margin-top: 5vh;
+    background-color: rgb(18, 21, 25);
+    border: 1px solid rgb(28, 31, 37);
+    border-radius: 20px;
+    padding: 3vw 5vw 3vw 5vw;
+
+}
+
+
+li#contact{
+    margin-left:4vh
+}
+
+.pcontact{
+    margin-bottom: 2vh;
+}
+
+.no-underline {
+    text-decoration: none;
+}

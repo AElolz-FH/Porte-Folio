@@ -61,6 +61,50 @@
             <div class="content">
                 <div class="aboutme">
                     <h2 class="h2">A propos de moi <span class="no-underline">👨</span></h2>
+                    <div id="markdown-content">
+                    </div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+                        integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+                        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                    <script>
+                        var converter = new showdown.Converter();
+                        var markdownContent =
+                            'Bienvenue sur mon portfolio 👋 ! Je m\'appelle Lagneaux Grégory et je suis passionné par le développement. Je suis diplômé en informatique 💻 avec une spécialisation dans le domaine des technologies nouvelles des systèmes d\'informations et décisionnels depuis mon master.\n\n' +
+                            '- Mon parcours professionnel jusqu\'à présent s\'est principalement concentré sur des projets personnels où j\'ai pu explorer et mettre en pratique mes compétences en HTML, CSS, JavaScript, PHP, ainsi que des frameworks tels que Spring Boot pour les API REST et Vue.js pour les applications front. J\'ai également acquis une expérience avec des technologies telles qu\'Angular, Docker, Traefik, Kafka et ELK.\n\n' +
+                            '- Ce qui me distingue, c\'est ma curiosité insatiable et ma volonté constante d\'apprendre 📚. Je considère l\'écoute 🔉 des autres et le travail en équipe 👩👨 comme des atouts majeurs dans ma démarche professionnelle.' +
+                            '- Bien que je n\'ai pas de certifications officielles à ce jour, j\'ai obtenu ma licence en informatique 🔖 l\'année dernière, ce qui a consolidé mes connaissances et compétences dans ce domaine.\n\n' +
+                            '- Parmi mes réalisations dont je suis particulièrement fier, figurent un site vitrine réalisé pour un architecte d\'intérieur, un projet développé avec Spring ainsi qu\'une application Vue.js. Ces projets reflètent ma capacité à allier créativité et rigueur technique.\n\n' +
+                            '- À court terme, mon objectif professionnel est de rejoindre une ESN (Entreprise de Services Numériques) pour approfondir mes connaissances du développement logiciel et des technologies actuelles. À long terme, j\'aspire à lancer des entreprises axées sur le matériel informatique et les périphériques, ainsi que sur le développement d\'un jeu vidéo en ligne 🎮 , en capitalisant sur ma passion pour les jeux vidéos 🎮 .\n\n' +
+                            '- En dehors du domaine professionnel, je suis un passionné de jeux vidéos 🎮  et de sport 🏃💪, ce qui nourrit également mon intérêt pour le développement de jeux vidéo en ligne 🎮 .\n\n' +
+                            '- Dans mon travail, je suis guidé par des valeurs telles que l\'organisation 📆 et la persévérance ➿. Mon approche est méthodique et organisée, et je suis toujours prêt à repenser et à améliorer mes solutions pour atteindre l\'efficacité maximale.\n\n' +
+                            '- Je suis enthousiaste à l\'idée de collaborer sur de nouveaux projets et de contribuer à des initiatives innovantes. N\'hésitez pas à explorer mon portfolio pour découvrir mes réalisations et à me contacter 📫  pour toute opportunité de collaboration ou de projet !\n\n'
+
+                        var converter = new showdown.Converter();
+                        var htmlContent = converter.makeHtml(markdownContent);
+
+                        // Remplacer les sauts de ligne par des balises <br>
+                        htmlContent = htmlContent.replace(/\n/g, '<br>');
+
+                        document.getElementById('markdown-content').innerHTML = htmlContent;
+                    </script>
+
+                    <div class="contact">
+                        <h2 class="h2">Contact <span class="no-underline">📫</span></h2>
+                        <p class="pcontact">Si vous voulez me contacter, n'hésitez pas à le faire via les adresses
+                            suivantes :</p>
+
+                        <ul>
+                            <li id="contact">
+                                <p class="pcontact">Adresse mail personnelle
+                                        : <a href="mailto:lagneauxgregory@gmail.com">lagneauxgregory@gmail.com</a>
+                            </li>
+                            <li id="contact">
+                                <p class="pcontact">Ou encore à cette adresse étudiante : <a
+                                        href="mailto:Gregory.Lagneaux@uphf.fr">Gregory.Lagneaux@uphf.fr</a></p>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
             </div>
         </div>

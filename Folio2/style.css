@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
 
 .pageflex {
@@ -176,6 +177,10 @@ h4.h4{
     overflow: scroll;
 }
 
+.content{
+    width: calc((100vw / 5)*4);
+}
+
 .contact{
     height: 25vh;
     width: 70vw;
@@ -198,4 +203,76 @@ li#contact{
 
 .no-underline {
     text-decoration: none;
+}
+
+.logo-container {
+    display: flex;
+    margin-top:3vh;
+  }
+  
+  .logo-container a {
+    margin-right: 3vw;
+    transition: 0.3s;
+  }
+  .logo-container a:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  .logo-container a:first-child {
+    filter: invert(1);
+  }
+  
+  .logo-container a:last-child {
+    margin-right: 0; /* Supprime la marge à droite pour le dernier logo */
+  }
+
+  .logo-container img {
+    width: 3vw; /* Largeur de 3vw */
+    height: 3vw; /* Hauteur de 3vw */
+  }
+
+  .competences {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux compétences de passer à la ligne suivante si nécessaire */
+    border: 1px solid white;
+    height: 80vh;
+    width: calc((95vw / 5) * 4);
+    border: 1px solid rgb(28, 31, 37);
+    border-radius: 20px;
+    overflow: scroll;
+  }
+  
+  .competence {
+    width: calc(50% - 4vw); /* 50% de largeur moins la marge */
+    height: calc(20vw - 4vw); /* 50% de hauteur moins la marge */
+    margin: 2vw; /* Marge entre les compétences */
+    border: 1px solid rgb(28, 31, 37);
+    border-radius: 20px;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2vw;
+  }
+
+  .competence-logo{
+    max-width: 5vw;
+    max-height: 10vw;
+  }
+  
+  
+.cardleft{
+    grid-row: 1;
+    grid-column: 1;
+    background-color: rgb(18, 21, 25);
+    border-right: 1px solid rgb(28, 31, 37);
+    text-align: center;
+    padding-top:30%;
+    height: calc(20vw - 4vw);
+    height: calc(20vw - 4vw); /* 50% de hauteur moins la marge */
+}
+.cardright{
+    grid-row: 1;
+    grid-template-columns: 2;
+    margin:auto auto;
+    margin-right: 2vw;
 }
